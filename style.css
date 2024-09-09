@@ -9,11 +9,13 @@ body{
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 4fr; 
+    width: 100vw;
 }
 /*Left*/ 
 .dashboard-menu {
     background-color: #db2777;
     color: white;
+    width: 100%;
 }
 .dashboard-menu > .head {
     display: flex;
@@ -22,18 +24,28 @@ body{
     margin-top: 1rem;
 }
 .dashboard-menu > .head > h2 {
-    font-size: 2rem
+    font-size: 2rem;
+    margin-right:2rem;
 }
 .dashboard-menu > p {
     display: flex;
     align-items: center;
     margin-left: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+}
+.dashboard-menu > p svg {
+    height: 1.5rem;
+    fill: white;
+    margin-right: 1.5rem; 
 }
 .dashboard-menu svg {
     margin-right:1rem;
 }
-
-
+.dashboard-menu > :nth-child(2),
+.dashboard-menu > :nth-child(8) {
+    margin-top: 2rem;
+}
 
 .dashboard-content {
     background-color: blue;
