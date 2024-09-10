@@ -1,9 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Lato";
 }
 body{
     height: 100vh;
+    width: 100vw;
 }
 .container {
     display: grid;
@@ -11,11 +13,12 @@ body{
     grid-template-columns: 1fr 4fr; 
     width: 100vw;
 }
-/*Left*/ 
+/*Left-side*/ 
 .dashboard-menu {
     background-color: #db2777;
     color: white;
     width: 100%;
+    user-select: none;
 }
 .dashboard-menu > .head {
     display: flex;
@@ -25,28 +28,158 @@ body{
 }
 .dashboard-menu > .head > h2 {
     font-size: 2rem;
-    margin-right:2rem;
+    margin-right: 2rem;
 }
 .dashboard-menu > p {
     display: flex;
     align-items: center;
     margin-left: 2.5rem;
     font-size: 1.5rem;
-    line-height: 2.3rem;
+    line-height: 2.4rem;
 }
 .dashboard-menu > p svg {
     height: 1.5rem;
-    fill: white;
     margin-right: 1.5rem; 
 }
 .dashboard-menu svg {
+    height: 3rem;
     margin-right:1rem;
+    fill: white;
 }
 .dashboard-menu > :nth-child(2),
 .dashboard-menu > :nth-child(8) {
     margin-top: 2rem;
 }
-
+.dashboard-menu > p:hover {
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+.dashboard-menu > p:active {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: rgb(240, 240, 240)
+}
+.dashboard-menu > p:active svg {
+    transform: rotate(0.02turn)
+  }
+/*right */
 .dashboard-content {
-    background-color: blue;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+}
+/*right-top-side*/
+.dashboard-content > .search {
+display: grid;
+grid-template-rows: 40px 90px;
+}
+.dashboard-content > .search > .search-top {
+    display: flex;
+    margin: 2rem 2rem 2rem 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard-content > .search > .search-top input {
+    width: 28rem;
+    padding: 0.3rem;
+    height: 1.7rem;
+    border-radius: 15px;
+    margin-left: 1.6rem;
+    background-color: #fad9e8;
+    border: 1px solid pink;
+    outline: 1px solid rgb(218, 12, 180)
+}
+.dashboard-content > .search > .search-top input:focus {
+    box-shadow: inset 1px 1px 4px rgb(218, 12, 180);
+    outline: none;
+}
+.dashboard-content > .search > .search-top .icon {
+    background-color: #9d999b;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 33px;
+    display: flex;
+    margin-right: 1rem;
+    user-select: none;
+}
+.dashboard-content > .search > .search-top .icon img {
+    display: flex;
+    align-self: center;
+    margin-bottom: 0.4rem;
+    height: 2.7rem;
+}
+.dashboard-content > .search > .search-bottom {
+    display: flex;
+    align-content: center;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 2.5rem;
+}
+.dashboard-content > .search > .search-bottom .icon2 {
+    background-color: #9d999b;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 33px;
+    display: flex;
+    margin-right: 1rem;
+    user-select: none;
+}
+.dashboard-content > .search > .search-bottom .iconPart > h2 {
+  width: 300px;
+}
+
+.dashboard-content > .search > .search-bottom .icon2 img {
+    height: 3.5rem;
+    width: 3.5rem;
+}
+.dashboard-content > .search > .search-bottom > .buttons {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+    align-content: start;
+    margin-left: 20rem;
+    margin-top: 1rem;
+}
+.dashboard-content > .search > .search-bottom > .buttons > input {
+  background-color: #db2777;
+  padding: 5px;
+  color: white;
+  width: 6rem;
+  height: 2.3rem;
+  border-radius: 20px;
+  font-family: "Lato";
+  font-style: italic;
+  font-size: 18px;
+  border: 1px solid black;
+}
+.dashboard-content > .search > .search-bottom > .buttons > input:hover {
+  background-color: #e24089;
+  transform: scale(1.1)
+}
+.dashboard-content > .search > .search-bottom > .buttons > input:active {
+    transform:scale(0.9)
+  }
+
+.dashboard-content > .search svg{
+    height: 1.5rem;
+}
+.dashboard-content > .search .notification:hover{
+    transform: rotate(var(--degree));
+    animation: rotate 0.5s infinite linear;
+}
+.dashboard-content > .search > .search-top .notification {
+    margin-left: 14rem;
+    margin-right: 1rem;
+}
+@keyframes rotate {
+    0% {
+        --degree: 20deg;
+    }
+    100% {
+        --degree: -20deg;
+    }
+}
+
+/*right-bottom-side*/
+.dashboard-content > .content {
+    background-color: rgb(228, 231, 231);
 }
