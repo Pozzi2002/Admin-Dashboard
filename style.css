@@ -3,6 +3,9 @@
     padding: 0;
     font-family: "Lato";
 }
+svg {
+    cursor: pointer
+}
 body{
     height: 100vh;
     /* width: 99vw; */
@@ -166,6 +169,7 @@ grid-template-columns: 1fr;
   font-style: italic;
   font-size: 18px;
   border: 1px solid black;
+  cursor: pointer;
 }
 .dashboard-content > .search > .search-bottom > .buttons > input:hover {
   background-color: #e24089;
@@ -178,6 +182,13 @@ grid-template-columns: 1fr;
 .dashboard-content > .search svg{
     height: 1.5rem;
 }
+.dashboard-content .search-top .headIcon svg:hover{
+  fill:rgb(218, 12, 180);
+  transform:scale(1.1)
+}
+.dashboard-content .search-top .headIcon svg:active{
+    transform:scale(1)
+  }
 .dashboard-content > .search .notification:hover{
     transform: rotate(var(--degree));
     animation: rotate 0.5s infinite linear;
