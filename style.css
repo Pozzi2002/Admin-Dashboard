@@ -242,7 +242,11 @@ grid-template-columns: 1fr;
     padding-left: 20px;
     padding-bottom: 5px;
     padding-right: 15px;
-    width: 300px;
+    height: 12rem;
+}
+.dashboard-content > .content > .project > .firstColumn > div h2 {
+    font-family: "Lato";
+    font-style: italic;
 }
 .dashboard-content > .content > .project > .firstColumn > div p {
     font-family: "Lato";
@@ -266,4 +270,87 @@ grid-template-columns: 1fr;
     gap: 5px;
     margin:0;
     padding-top: 15px;
+}
+.thirdColumn {
+  display: grid;
+  gap: 25px;
+  margin-top: 20px;
+}
+.thirdColumn .top,
+.thirdColumn .bottom{
+    background-color: white;
+    border: 1px solid black;
+    gap: 25px;
+    border-radius: 12px;
+    width: 18rem;
+    height: 17rem;
+    margin-top: 30px;
+    margin-left: 20px;
+    padding: 20px;
+}
+.thirdColumn .top p {
+    color:rgb(218, 12, 180);
+    font-weight: 700;
+}
+.thirdColumn div h2 {
+  margin-bottom: 10px;
+}
+.thirdColumn div hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.sex2 {
+    position: absolute;
+}
+.sex2:before {
+    content: "Announcements";
+    font-family: "Lato";
+    font-style: italic;
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    bottom: 65px;
+    right: 20px;
+    text-shadow: 3px 3px 2px rgb(218, 12, 180);
+}
+.sex3 {
+    position: absolute;
+    width: 0;
+}
+.sex3:before {
+    content: "Trending";
+    font-family: "Lato";
+    font-style: italic;
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    bottom: 65px;
+    right: 20px;
+    text-shadow: 3px 3px 2px rgb(218, 12, 180);
+}
+.thirdColumn .bottom {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.thirdColumn .bottom img {
+    height: 50px;
+}
+.thirdColumn .bottom .Ic {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    width: 300px;
+}
+.thirdColumn .bottom .Ic h2 {
+    font-size: 15px;
+    width: 200px;
+    color: rgb(218, 12, 180)
+}
+.thirdColumn .bottom .Ic p {
+    letter-spacing: 1px;
+    font-family: "Lato";
+    font-style:italic;
+    font-size: 17px;
 }
