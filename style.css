@@ -5,13 +5,13 @@
 }
 body{
     height: 100vh;
-    width: 100vw;
+    /* width: 99vw; */
 }
 .container {
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 4fr; 
-    width: 100vw;
+    width: 100%;
 }
 /*Left-side*/ 
 .dashboard-menu {
@@ -65,7 +65,7 @@ body{
 /*right */
 .dashboard-content {
   display: grid;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 1fr 5fr;
   width: 100%
 }
 /*right-top-side*/
@@ -79,7 +79,7 @@ grid-template-columns: 1fr;
     margin: 35px 35px 35px 35px;
     width: 95%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 .dashboard-content > .search > .search-top input {
     width: 28rem;
@@ -116,7 +116,7 @@ grid-template-columns: 1fr;
     margin-top: 35px;
     margin-left: 35px;
     width: 95%;
-    justify-content: center;
+    justify-content: space-between;
 }
 .dashboard-content > .search > .search-bottom .icon2 {
     background-color: #9d999b;
@@ -126,6 +126,18 @@ grid-template-columns: 1fr;
     display: flex;
     margin-right: 1rem;
     user-select: none;
+}
+.headIcon2 {
+    display: flex;
+    align-items: center
+}
+.headIcon {
+    display: flex;
+    align-items: center
+}
+.headIcon3 {
+    display: flex;
+    align-items: center
 }
 .dashboard-content > .search > .search-bottom .iconPart > h2 {
   width: 300px;
@@ -186,16 +198,14 @@ grid-template-columns: 1fr;
 /*right-bottom-side*/
 .dashboard-content > .content {
     background-color: rgb(228, 231, 231);
-    /* height: 100%; */
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
+    padding-bottom: 30px;
 }
 .dashboard-content > .content > .project {
     display: grid;
     height: 95%;
     grid-template-columns: 2fr 1fr;
     gap: 2px;
-    /* margin-top: 25px; */
+    margin-top: 25px;
 }
 .dashboard-content > .content > .project > .firstColumn {
     margin: 0;
@@ -204,25 +214,56 @@ grid-template-columns: 1fr;
     grid-template-columns: 1fr 1fr;
     margin-top: 35px;
     margin-left: 15px;
-    gap: 2px
+    gap: 12px;
 }
 .Sex {
-    position: absolute
+  position: absolute;
 }
 .Sex:before {
   font-family: "Lato";
   font-style: italic;
   position: relative;
   content: "Your project";
-  font-size: 23px;
+  font-size: 30px;
   font-weight: bold;
-  bottom: 60px;
+  bottom: 65px;
+  right: 20px;
+  text-shadow: 3px 3px 2px rgb(218, 12, 180);
 }
 .dashboard-content > .content > .project > .firstColumn > div {
     background-color: white;
     border: 1px solid black;
-    margin: 15px 15px 5px 5px;
+    margin: 15px 5px 5px 0px;
     border-radius: 12px;
     background-image: -webkit-linear-gradient(left, #db2777 2%, transparent 2%);
-    padding: 20px;
+    background-image: -moz-linear-gradient(left, #db2777 2%, transparent 2%);
+    background-image: linear-gradient(left, #db2777 2%, transparent 2%);
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    width: 300px;
+}
+.dashboard-content > .content > .project > .firstColumn > div p {
+    font-family: "Lato";
+    font-size: 17px;
+    margin-top: 7px;
+    padding-right: 15px;
+    color:rgb(218, 12, 180);
+    font-weight: 510;
+}
+.dashboard-content > .content > .project > .firstColumn > div svg {
+    height: 1.5rem;
+}
+.dashboard-content > .content > .project div svg:hover {
+    animation: rotate 0.8s infinite linear;
+    transform: rotate(var(--degree))
+}
+.threeSvg {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: 5px;
+    margin:0;
+    padding-top: 15px;
 }
